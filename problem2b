@@ -1,22 +1,27 @@
-        import matplotlib.pyplot as plt
+        import matplotlib.pyplot as plt #A way of plotting is imported
 
-        infilename = "test.txt"
+        infilename = "test.txt" #The file with all the data is imported
 
-        x = []
-        u = []
-
+        x = [] #Vector x is created
+        u = [] #Vector u is created
+        '''
+        The code opens the data file and, skipping the first line, adds every x value to the x vector. The same operation is done with the u(x) values.
+        '''
         with open(infilename, "r") as infile:
-            infile.readline() #skip first line.
+            infile.readline() #Skip first line.
             lines = infile.readlines()
             for line in lines:
-                vals = line.split()
-                x.append(float(vals[0]))
-                u.append(float(vals[1]))
+                vals = line.split() #Splits the data file into two columnes
+                x.append(float(vals[0])) #Adds every x value to vactor x
+                u.append(float(vals[1])) #Adds every u(x) value to vactor u
 
-        plt.plot(x, u)
+        plt.plot(x, u) #Plot creation
+        '''
+        The plot gets embellished with some labels, a title and with grids.
+        '''
         plt.ylabel('u(x)')
         plt.xlabel('x')
         plt.title('u(x)=1-(1-exp(-10))x-exp(-10x)')
-        plt.grid(True)
-        plt.show
-        plt.savefig("figure.pdf")
+        plt.grid(True) #Grids get painted
+        plt.show #The plot is shown
+        plt.savefig("figure.pdf") #The plot is saved as a pdf file
