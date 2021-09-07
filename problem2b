@@ -1,0 +1,22 @@
+        import matplotlib.pyplot as plt
+
+        infilename = "test.txt"
+
+        x = []
+        u = []
+
+        with open(infilename, "r") as infile:
+            infile.readline() #skip first line.
+            lines = infile.readlines()
+            for line in lines:
+                vals = line.split()
+                x.append(float(vals[0]))
+                u.append(float(vals[1]))
+
+        plt.plot(x, u)
+        plt.ylabel('u(x)')
+        plt.xlabel('x')
+        plt.title('u(x)=1-(1-exp(-10))x-exp(-10x)')
+        plt.grid(True)
+        plt.show
+        plt.savefig("figure.pdf")
