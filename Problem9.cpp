@@ -8,31 +8,40 @@ using namespace std;
 
 int main() {
 
-    //First you have to introduce the number n that is the dimension of the solution v that we want to obtain. We will write down an example here, but feel free of changing it
+    //The number n is the dimension of the solution v we want to obtain
 
-    int n = 10;
+    int n = 10; //As an example
 
 
-    //After that introduce a new integer to simplify our writing later
+    //After this, we introduce a new integer to simplify the code
 
     int m = n - 1;
 
+    //Now we define vectors c and b and fill them with ones
 
     vec c = vec(m).fill(1.);
     vec b = vec(n).fill(1.);
+     
+    //We generate vector g and fill it with random numbers 
 
     vec g = vec(n).randu();
 
+    //The following loop allows to fill the vectors defined before with the numbers that are needed
 
     for (int i = 0; i < m; i++) {
+
+        //We create the elements of the vectors c and b by performing some operations 
+
         c(i) = -(i * 1.0 + 1.0) * c(i);
         b(i) = (i * 1.0 + 2.0) * b(i);
         g(i + 1) = (i * 1.0 + 1.0) * g(i * 1.0 + 1.0) + g(i);
     }
 
+    //The last element of the vector b needs to be created apart because the loop stops at m-1
+
     b(m) = (m * 1.0 + 2.0) * b(m);
 
-
+    //We print in screen the vectors c and b
     c.print("c");
     b.print("b");
 
@@ -46,7 +55,7 @@ int main() {
     v(m) = g(m) / b(m);
 
 
-    //Then we get the rest of them using a for
+    //Then we get the rest of them using a loop for
 
     for (int i = 0; i < m; i++) {
 
@@ -55,6 +64,8 @@ int main() {
         v(m - j) = (g(m - j) - c(m - j) * v(n - j)) / b(m - j);
 
     }
+
+    //We print in screen vector v
 
     v.print("v.");
 
