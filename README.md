@@ -5,6 +5,6 @@ For problem 6
 
 For problem 7
 
-For problem 8 you should open the file "Project1_Problem8.cpp" on your favourite C++ compiler, compile it, link it and execute it. YOu copoy the data it prints into a .txt file named "output.txt". Once you have done it, you have to open the file "errors" on your Python compiler and run it. You will get different plots of the errors in a .pdf format. Some of this plots are the absolute error against the stepsize (h), againts h in logarithmic axis, against Log10(h), the absolute error against the stepsize (h), againts h in logarithmic axis and against Log10(h).
+For problem 8 you should open the file "Project1_Problem8.cpp" on your C++ compiler, compile it, link it and execute it. YOu copoy the data it prints into a .txt file named "output.txt". Once you have done it, you have to open the file "errors" on your Python compiler and run it. You will get different plots of the errors in a .pdf format. Some of this plots are the absolute error against the stepsize (h), againts h in logarithmic axis, against Log10(h), the absolute error against the stepsize (h), againts h in logarithmic axis and against Log10(h).
 
 For problem 9
