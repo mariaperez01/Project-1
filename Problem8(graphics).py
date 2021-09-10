@@ -205,4 +205,4 @@ plt.title("Log10 of absolute error", fontsize=10)
 plt.ylabel(r'$log_{10}(\Delta_i)$')
 plt.xlabel("x")
 plt.grid(True) #Grids get painted
-plt.savefig("Problem_8-a_plot_n-100.pdf")
+plt.savefig("Problem_8-a_plot.pdf")
