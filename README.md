@@ -5,6 +5,8 @@ For problem 6
 
 For problem 7
 
-For problem 8 you should open the file "Problem8(graphics).py" on your Python compiler and run it once you have saved the diferent "vx_solution.txt" in the same folder (_ stands for any number between 10, 100, 1000, 10000, 100000 and 1000000). You will a plot of the errors in a .pdf format. This plot are the absolute error against x.
+For problem 8, section a, you should open the file "Problem8a(graphics).py" on your Python compiler and run it once you have saved the diferent "vx_solution.txt" in the same folder (_ stands for any f these numbers 10, 100, 1000, 10000, 100000 and 1000000). You will get a plot of the errors in a .pdf format. This plot represents the logarithm (in base ten) of the absolute error against x for each n.
+For problem 8, section b, you should open the file "Problem8b(graphics).py" on your Python compiler and run it once you have saved the diferent "vx_solution.txt" in the same folder (_ stands for any f these numbers 10, 100, 1000, 10000, 100000 and 1000000). You will get a plot of the errors in a .pdf format. This plot represents the logarithm (in base ten) of the relative error against x for each n.
+For problem 8, section c, 
 
 For problem 9
