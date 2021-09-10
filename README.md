@@ -10,3 +10,5 @@ For problem 8, section b, you should open the file "Problem8b(graphics).py" on y
 For problem 8, section c, you should open the file "Problem8b(table).py" on your Python compiler and run it once you have saved the diferent "vx_solution.txt" in the same folder (_ stands for any of these numbers 10, 100, 1000, 10000 and 100000). You will get an array with the maximun relative error for each n=10^i, where i is the position of each value of the array (starting in 1).
 
 For problem 9
+
+For problem 10
