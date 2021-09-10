@@ -69,7 +69,7 @@ int main() {
  
        
     for (int i=n-3; i > 0; i--){
-        v(i) = (g(i)-c(i)*v(i+1)) / b(i)
+        v(i) = (g(i)-c(i)*v(i+1)) / b(i);
     } 
     
   
