@@ -22,8 +22,6 @@ with open(infilename , "r") as infile:
         vals = line.split()
         xl.append(float(vals[0]))
         vl.append(float(vals[1]))
-        
-# h, d2u_approx, d2u_exact = np.loadtxt("output.txt", usecols=(0,1,2), unpack=True)
 
 x = np.array(xl)
 
