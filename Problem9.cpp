@@ -17,10 +17,9 @@ int main() {
 
     int m = n - 1;
 
-    //Now we define vectors b and c a fill b with zeros and c with ones
+    //Now we define vector b and fill it with zeros
 
     vec b = vec(n, fill::zeros);
-    vec c = vec(m).fill(-1.);
 
     //We generate vector g and fill it with random numbers 
 
@@ -40,10 +39,8 @@ int main() {
 
     b(m) = (m + 2) / (m + 1);
 
-    //We print in screen vectors c and b
+    //We print in screen vectors b
     b.print("b");
-    c.print("b");
-
 
     //Finally, we will get the values for the vector we were looking for, that we will call v. First, we will create a zero vector that will be later filled with the results we get
 
