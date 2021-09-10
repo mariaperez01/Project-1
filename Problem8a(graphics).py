@@ -16,11 +16,11 @@ plt.figure(figsize=(figwidth, figheight))
 
 textnames = ['vx10solution.txt' , 'vx100solution.txt' , 'vx1000solution.txt' , 
              
-             'vx10000solution.txt' , 'vx100000solution.txt' , 'vx1000000solution.txt']
+             'vx10000solution.txt' , 'vx100000solution.txt']
 
-nseq = ['10' , '100', '1000' , '10000' , '100000' , '1000000']
+nseq = ['10' , '100', '1000' , '10000' , '100000']
 
-for i in range(0,6):
+for i in range(0,5):
     xl = []
 
     vl = []
