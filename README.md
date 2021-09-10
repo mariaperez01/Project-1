@@ -5,6 +5,6 @@ For problem 6
 
 For problem 7
 
-For problem 8 you should open the file "Project1_Problem8.cpp" on your C++ compiler, compile it, link it and execute it. It will generate a .txt file named "output.txt". Once you have done it, you have to open the file "errors" on your Python compiler and run it. You will get different plots of the errors in a .pdf format. This plots are the absolute error against the stepsize (h), againts h in logarithmic axis, against Log10(h), the absolute error against the stepsize (h), againts h in logarithmic axis and against Log10(h).
+For problem 8 you should open the file "Problem8(graphics).py" on your Python compiler and run it once you have saved the diferent "vx_solution.txt" in the same folder (_ stands for any number between 10, 100, 1000, 10000, 100000 and 1000000). You will a plot of the errors in a .pdf format. This plot are the absolute error against x.
 
 For problem 9
