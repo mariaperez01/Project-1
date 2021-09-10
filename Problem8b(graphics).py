@@ -42,7 +42,7 @@ for i in range(0,5):
     rel_err = np.absolute(abs_err / u(x))
     log10_abs_err = np.log10(abs_err)
     log10_rel_err = np.log10(rel_err)
-    plt.plot(x, log10_rel_err, label="n=" + nseq[i])
+    plt.plot(x, log10_rel_err, label="n=" + nseq[i], linewidth = 0.5)
     
 plt.title("Log10 of relative error", fontsize=10)
 plt.ylabel(r'$log_{10}(\epsilon_i)$')
