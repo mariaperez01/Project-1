@@ -14,18 +14,16 @@ int main() {
     
     //First, you have to introduce n, the number of grid points in which you want to divide the interval [0,1]. Here, we have used n=100 as an example 
    
-    int n = 100;
+    int n = 100; // Number of inner points 
 
     //Now we introduce m to make the writing easier later
-    
-    int m = n-1;
     
     
    //We introduce the vectors a, b and c that will always be the same 
 
-    vec a = vec(m, fill::zeros);
+    vec a = vec(n, fill::zeros);
     vec b = vec(n, fill::zeros);
-    vec c = vec(m, fill::zeros);
+    vec c = vec(n, fill::zeros);
 
     a.fill(-1);
     b.fill(2);
@@ -41,18 +39,22 @@ int main() {
     
     /After that, we calculate the stepsize h, and with that and f, we calculate the vector g
     
-    double h = 1 / (1.0*n);
-    vec g = f*pow(h,2);
+    double h = 1.0 / (n-1.0);
+    double hh = h*h;
+    vec g = f*hh;
 
     
     //We now do the forward calculations
-
-    for (int i = 0; i < m; i++) {
-        
-        b(i+1) -= a(i) / b(i) * c(i);
-        g(i + 1) -= a(i) / b(i) * g(i);
-
+    
+    for (int i=1; i < n-1; i++){
+        b(i) = b(i) - a(i)*c(i-1)/b(i-1);
+        g(i) = g(i) - a(i)*g(i-1)/b(i-1);
     }
+
+  //  for (int i = 0; i < m; i++)  
+   //     b(i+1) -= a(i+1) / b(i) * c(i);
+    //    g(i + 1) -= a(i+1) / b(i) * g(i);
+    //}
 
     //And, finally, we will get the values for the vector we were looking for, that we will call v, using the backwards calculations 
     
@@ -60,17 +62,17 @@ int main() {
 
     //We won't change the first and last element to satisfy the boundary conditions, so we get the next-to-last element of the vector, which is the only one that's obtained in a different way
 
-    v(m - 1) = g(m - 1) / b(m - 1);
+    v(n-2) = g(n-2) / b(n-2);
 
     //Now we get the rest of them using a for(except for the first one, as we have already said)
 
-    for (int i = 0; i < m-1; i++) {
-
-        int j = i + 1;
-
-        v(m - j) = (g(m - j) - c(m - j) * v(n - j )) / b(m - j);
-
-    }
+ 
+       
+    for (int i=n-3; i > 0; i--){
+        v(i) = (g(i)-c(i)*v(i+1)) / b(i)
+    } 
+    
+  
 
     v.brief_print("v.");
     
