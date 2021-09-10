@@ -46,6 +46,8 @@ for i in range(0,5):
     
 plt.title("Log10 of relative error", fontsize=10)
 plt.ylabel(r'$log_{10}(\epsilon_i)$')
+plt.legend( ["10" , "100" , "1000" , "10000" , "100000", "1000000"] ,
+           loc='lower center',  prop={'size': 4})
 plt.xlabel("x")
 plt.grid(True) #Grids get painted
 plt.savefig("Problem_8-b_plot.pdf")
