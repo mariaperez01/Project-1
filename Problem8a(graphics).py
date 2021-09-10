@@ -47,6 +47,8 @@ for i in range(0,5):
     
 plt.title("Log10 of absolute error", fontsize=10)
 plt.ylim(-14,-1)
+plt.legend( ["10" , "100" , "1000" , "10000" , "100000", "1000000"] ,
+           loc='lower center',  prop={'size': 4})
 plt.ylabel(r'$log_{10}(\Delta_i)$')
 plt.xlabel("x")
 plt.grid(True) #Grids get painted
