@@ -9,7 +9,7 @@ using namespace std;
 int main() {
 
     //The number n is the dimension of the solution v we want to obtain
-
+     
     int n = 10; //As an example
 
 
@@ -17,11 +17,11 @@ int main() {
 
     int m = n - 1;
 
-    //Now we define vectors c and b and fill them with ones
+    //Now we define vectors b and c a fill b with zeros and c with ones
 
-    vec c = vec(m).fill(1.);
-    vec b = vec(n).fill(1.);
-     
+    vec b = vec(n, fill::zeros);
+    vec c = vec(m).fill(-1.);
+
     //We generate vector g and fill it with random numbers 
 
     vec g = vec(n).randu();
@@ -32,18 +32,17 @@ int main() {
 
         //We create the elements of the vectors c and b by performing some operations 
 
-        c(i) = -(i * 1.0 + 1.0) * c(i);
-        b(i) = (i * 1.0 + 2.0) * b(i);
-        g(i + 1) = (i * 1.0 + 1.0) * g(i * 1.0 + 1.0) + g(i);
+        b(i) = (i + 2) / (i + 1);
+        g(i + 1) = g(i + 1) + ((i + 1) / (i + 2)) * g(i);
     }
 
     //The last element of the vector b needs to be created apart because the loop stops at m-1
 
-    b(m) = (m * 1.0 + 2.0) * b(m);
+    b(m) = (m + 2) / (m + 1);
 
-    //We print in screen the vectors c and b
-    c.print("c");
+    //We print in screen vectors c and b
     b.print("b");
+    c.print("b");
 
 
     //Finally, we will get the values for the vector we were looking for, that we will call v. First, we will create a zero vector that will be later filled with the results we get
@@ -61,7 +60,7 @@ int main() {
 
         int j = i + 1;
 
-        v(m - j) = (g(m - j) - c(m - j) * v(n - j)) / b(m - j);
+        v(m - j) = (g(m - j) - (-1.) * v(n - j)) / b(m - j);
 
     }
 
