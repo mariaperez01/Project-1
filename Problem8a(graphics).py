@@ -43,7 +43,7 @@ for i in range(0,5):
     log10_abs_err = np.log10(abs_err)
     log10_rel_err = np.log10(rel_err)
     log10_abs_err[0] = -20
-    plt.plot(x, log10_abs_err, label="n="+nseq[i])
+    plt.plot(x, log10_abs_err, label="n="+nseq[i], linewidth = 0.5 )
     
 plt.title("Log10 of absolute error", fontsize=10)
 plt.ylim(-14,-1)
