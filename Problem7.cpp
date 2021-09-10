@@ -9,18 +9,15 @@
 using namespace arma;
 using namespace std;
 
-
 int main() {
     
     //First, you have to introduce n, the number of grid points in which you want to divide the interval [0,1]. Here, we have used n=100 as an example 
    
-    int n = 100; // Number of inner points 
-
-    //Now we introduce m to make the writing easier later
+    int n = 100;
     
     
-   //We introduce the vectors a, b and c that will always be the same 
-
+   //We introduce the vectors a, b and c
+    
     vec a = vec(n, fill::zeros);
     vec b = vec(n, fill::zeros);
     vec c = vec(n, fill::zeros);
@@ -29,6 +26,7 @@ int main() {
     b.fill(2);
     c.fill(-1);
 
+    
     //Now, we create the vector x, a vector of n points starting on 0 and ending on 1
 
     vec x = linspace<vec>(0, 1, n);
@@ -37,7 +35,7 @@ int main() {
     
     vec f = 100. * exp(-10. * x);
     
-    /After that, we calculate the stepsize h, and with that and f, we calculate the vector g
+    //After that, we calculate the stepsize h, and with that and f, we calculate the vector g
     
     double h = 1.0 / (n-1.0);
     double hh = h*h;
@@ -51,30 +49,31 @@ int main() {
         g(i) = g(i) - a(i)*g(i-1)/b(i-1);
     }
 
-  //  for (int i = 0; i < m; i++)  
-   //     b(i+1) -= a(i+1) / b(i) * c(i);
-    //    g(i + 1) -= a(i+1) / b(i) * g(i);
-    //}
+    
 
     //And, finally, we will get the values for the vector we were looking for, that we will call v, using the backwards calculations 
     
     vec v = vec(n, fill::zeros);
 
-    //We won't change the first and last element to satisfy the boundary conditions, so we get the next-to-last element of the vector, which is the only one that's obtained in a different way
+    //We won't change the first and last element so that v satisfies the boundary conditions, so we get the next-to-last element of the vector, which is the only one that's obtained in a different way
 
     v(n-2) = g(n-2) / b(n-2);
 
     //Now we get the rest of them using a for(except for the first one, as we have already said)
 
- 
-       
     for (int i=n-3; i > 0; i--){
+        
         v(i) = (g(i)-c(i)*v(i+1)) / b(i);
     } 
     
   
+    //Eventhough we are going to create a document with x and v, we will also print them to make everything more clear
 
     v.brief_print("v.");
+    x.brief_print("x.");
+    
+    
+    
     
     //For section b we will create a .txt file that stores the x vector and the v solution obtained
     ofstream ofile; 
