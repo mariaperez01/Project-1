@@ -9,7 +9,7 @@ You should first open the file "Problem2a" on your favourite C++ compiler, compi
 
 ## Problem 6
 
-You should first open the file "Problem6.cpp" and copy the code inside to the compiler of your choice. Once you've done it, you can introduce the dimension n of the solution v you want to get, any matrix you want(introducing the three vectors that correspond to the three diagonals and the vector g. If you omit this last step, the program will still work, because there is already an example with n=10 in it. After that, you should compile it, link it(including the armadillo extension) and execute it. You are supposed to receive as a feedback the solution v.
+You should first open the file "Problem6.cpp" and copy the code inside to the compiler of your choice. Once you've done it, you can introduce the dimension n of the solution v you want to get, any matrix you want(introducing the three vectors that correspond to the three diagonals and the vector g. If you omit this last step, the program will still work, because there is already an example with n=10 in it. After that, you should compile it, link it (including the armadillo extension) and execute it. You are supposed to receive as a feedback the solution v.
 
 
 ## Problem 7
