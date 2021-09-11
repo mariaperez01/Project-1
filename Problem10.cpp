@@ -37,7 +37,7 @@ int main() {
 		vec c = vec(n).randu();
 
 
-		//We are going to fill vectors a b and c with the necessary values to get matrix A
+		//We are going to fill vectors a b and c with the necessary values to get the same A matrix used in problem 9
 
 		a.fill(-1);
 		b.fill(2);
