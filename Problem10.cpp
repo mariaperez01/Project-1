@@ -32,9 +32,9 @@ int main() {
 
 		int n = pow(10, j);
 
-		vec a = vec(n).randu();
-		vec b = vec(n).randu();
-		vec c = vec(n).randu();
+		vec a = vec(n, fill::zeros);
+		vec b = vec(n, fill:zeros);
+		vec c = vec(n, fill::zeros);
 
 
 		//We are going to fill vectors a b and c with the necessary values to get the same A matrix used in problem 9
