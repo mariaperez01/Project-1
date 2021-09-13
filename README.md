@@ -20,7 +20,7 @@ You should open the file "Problem7a.cpp" and copy the code that can be found ins
 
 ### Section b
 
-First, you should open the file "Problem7b.py", copy the code inside the file in your Python compiler. Then you have to make sure that the diferent files "vx_solution.txt" are in the same folder. In this code the values of the dimension n that are used are the following ones: 10, 100, 1000 and 100000. Once you execute the code you will get diferent plots that compares our numeric solutions for different values of n aiganst the exact solution for u(x) in Eq.2. This plots will be generated in a .pdf format.
+First, you should open the file "Problem7b.py", copy the code inside the file in your Python compiler. Then you have to make sure that the diferent files "vx_solution.txt" are in the same folder. In this code the values of the dimension n that are used are the following ones: 10, 100, 1000, 10000 and 100000. Once you execute the code you will get diferent plots that compares our numeric solutions for different values of n aiganst the exact solution for u(x) in Eq.2. This plots will be generated in a .pdf format.
 
 ## Problem 8
 
